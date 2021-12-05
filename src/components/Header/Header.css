@@ -1,0 +1,99 @@
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  position: fixed;
+  z-index: 99;
+}
+
+.header__container {
+  width: 1465px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.header__menus__icon{
+  display: none;
+  
+
+}
+
+.header__container > a {
+  font-family: "Montserrat";
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+}
+
+
+
+.container {
+  display: flex;
+}
+
+.header__container__menus__list {
+  display: flex;
+}
+
+.header__container__menus__item {
+  padding: 0 38px;
+}
+
+.header__container__menus__item > a {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-size: 12px;
+  color: white;
+  word-spacing: 4px
+}
+
+.header__container__menus__list li:last-child{
+  padding: 0 0;
+}
+
+.header__container__menus__span {
+  color: white;
+}
+
+.bi-x{
+  color: white;
+  display: none;
+}
+
+@media screen and (max-width: 576px) {
+  .header__container__menus__list{
+    background-color: black;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: -100%;
+    transition: top 0.5s ease;
+  }
+
+  .top{
+   top: 0;
+  }
+
+  .line{
+    display: none;
+  }
+  .bi-x{
+    display: block;
+    position: relative;
+    padding-left: 34px ;
+    cursor: pointer;
+  }
+
+  .header__menus__icon{
+    display: block;
+    color: white;
+    padding-right: 50px ;
+    cursor: pointer;
+  }
+}
